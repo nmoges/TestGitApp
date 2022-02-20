@@ -1,5 +1,6 @@
 package com.testgitapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener {
-            Log.d("BUTTON", "CLick detected")
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
     }
 }
